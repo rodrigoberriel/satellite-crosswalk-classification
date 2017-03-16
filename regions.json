@@ -1,0 +1,108 @@
+{
+    "asia": [
+        {
+            "name": "Asia-Japan-Tokyo",
+            "obs": "6888 crosswalks",
+            "region": [35.629245, 139.561305, 35.765659, 139.759820]
+        },
+        {
+            "name": "Asia-Japan-Toyokawa",
+            "obs": "1382 crosswalks",
+            "region": [34.711726, 137.324439, 34.873238, 137.455554]
+        },
+        {
+            "name": "Asia-Japan-Sapporo",
+            "obs": "6946 crosswalks",
+            "region": [43.029058, 141.242608, 43.151831, 141.465462]
+        }
+    ],
+    "europe": [
+        {
+            "name": "Europe-Belgium-Brussels",
+            "obs": "7916 crosswalks",
+            "region": [50.793887, 4.269392, 50.918650, 4.475505]
+        },
+        {
+            "name": "Europe-France-Lion",
+            "obs": "5168 crosswalks",
+            "region": [45.710430, 4.793002, 45.791062, 4.940539]
+        },
+        {
+            "name": "Europe-France-Paris",
+            "obs": "5828 crosswalks",
+            "region": [48.837295, 2.276826, 48.883828, 2.368920]
+        },
+        {
+            "name": "Europe-France-Marseille",
+            "obs": "2615 crosswalks",
+            "region": [43.211096, 5.328920, 43.360548, 5.464189]
+        },
+        {
+            "name": "Europe-France-Toulouse",
+            "obs": "4794 crosswalks",
+            "region": [43.538854, 1.346763, 43.671892, 1.510892]
+        },
+        {
+            "name": "Europe-Italy-Turim",
+            "obs": "5081 crosswalks",
+            "region": [44.994302, 7.510510, 45.110280, 7.716859]
+        },
+        {
+            "name": "Europe-Italy-Milan",
+            "obs": "4536 crosswalks",
+            "region": [45.444139, 9.151489, 45.486364, 9.217274]
+        },
+        {
+            "name": "Europe-Portugal-Porto",
+            "obs": "1630 crosswalks",
+            "region": [41.087073, -8.660719, 41.239416, -8.519772]
+        },
+        {
+            "name": "Europe-Portugal-Lisbon",
+            "obs": "1731 crosswalks",
+            "region": [38.699809, -9.179088, 38.745738, -9.118640]
+        },
+        {
+            "name": "Europe-Spain-Saragoca",
+            "obs": "1413 crosswalks",
+            "region": [41.629749, -0.910777, 41.661818, -0.856962]
+        },
+        {
+            "name": "Europe-Switzerland-Zurich",
+            "obs": "1842 crosswalks",
+            "region": [47.352698, 8.488280, 47.395245, 8.568789]
+        }
+    ],
+    "america": [
+        {
+            "name": "America-USA-Seattle",
+            "obs": "1276 crosswalks",
+            "region": [47.529544, -122.368844, 47.755505, -122.263349]
+        },
+        {
+            "name": "America-USA-WashingtonDC",
+            "obs": "2838 crosswalks",
+            "region": [38.825914, -77.115486, 38.952895, -76.956717]
+        },
+        {
+            "name": "America-USA-Philadelphia",
+            "obs": "2356 crosswalks",
+            "region": [39.925153, -75.252115, 40.012970, -75.087034]
+        },
+        {
+            "name": "America-USA-NewYork",
+            "obs": "2191 crosswalks",
+            "region": [40.697236, -74.013029, 40.865694, -73.818708]
+        },
+        {
+            "name": "America-Canada-Mississauga",
+            "obs": "3259 crosswalks",
+            "region": [43.538503, -79.730815, 43.713183, -79.566078]
+        },
+        {
+            "name": "America-Canada-Toronto",
+            "obs": "3902 crosswalks",
+            "region": [43.609751, -79.502044, 43.758783, -79.308479]
+        }
+    ]
+}
