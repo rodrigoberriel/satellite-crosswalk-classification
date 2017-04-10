@@ -283,6 +283,7 @@ def main(region_name, download_crosswalk_flag, download_no_crosswalk_flag, api_k
 
     if api_key is None:
         exit('Go to console.developers.google.com and get an API_KEY: it is required!')
+    global key
     key = api_key
 
     regions = load_regions(region_name)

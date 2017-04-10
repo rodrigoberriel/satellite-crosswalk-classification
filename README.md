@@ -4,8 +4,16 @@ High-resolution satellite imagery have been increasingly used on remote sensing 
 ---
 
 This repository will be used to share the data described in the paper submitted to the [Special Stream](http://www.grss-ieee.org/letters/special-streams/stream9) of the **IEEE Geoscience and Remote Sensing Letters** related to the [SIBGRAPI 2017](http://sibgrapi2017.ic.uff.br/call-grsl.html).
-- Regions used to collect the data: 
-- Scripts related to the data acquisition will be made available upon acceptance
+
+
+### Dataset Automatic Acquisition and Annotation
+To download the dataset, you should run the command below for each region of interest. Be careful with your API quota.
+
+```python
+python crosswalk-downloader.py region_name {download_crosswalk:0,1} {download_no_crosswalk:0,1} API_KEY
+# e.g. to download the crosswalks of the regions in Asia
+python crosswalk-downloader.py asia 1 0 {API_KEY}
+```
 
 ### Dataset
 The dataset used in this work is defined by a group of city-based regions. As stated in the paper, "even though each
@@ -38,15 +46,6 @@ part of the dataset is named after a city, some selected regions were large enou
 | **Asia**                   | **15,216** | **35,449**    |
 | **Total**                  | **73,592** | **171,721**   |
 
-
-### Dataset Automatic Acquisition and Annotation
-To download the dataset, you should run the command below for each region of interest. Be careful with your API quota.
-
-```python
-python crosswalk-downloader.py region_name {download_crosswalk:0,1} {download_no_crosswalk:0,1} API_KEY
-# e.g. to download the crosswalks of the regions in Asia
-python crosswalk-downloader.py asia 1 0 {API_KEY}
-```
 
 ### Positive Samples
 Available soon
