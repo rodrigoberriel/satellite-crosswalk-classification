@@ -41,10 +41,10 @@ part of the dataset is named after a city, some selected regions were large enou
 | America-Canada-Toronto     | 3,902      | 8,852         |
 | **America**                | **15,822** | **36,811**    |
 | Asia-Japan-Tokyo           | 6,888      | 15,529        |
-| Asia-Japan-Toyokawa        | 1,382      | 4,140         |
+| Asia-Japan-Toyokawa        | 1,837      | 4,140         |
 | Asia-Japan-Sapporo         | 6,946      | 15,780        |
-| **Asia**                   | **15,216** | **35,449**    |
-| **Total**                  | **73,592** | **171,721**   |
+| **Asia**                   | **15,671** | **35,449**    |
+| **Total**                  | **74,047** | **171,721**   |
 
 
 ### Positive Samples

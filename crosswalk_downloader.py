@@ -3,7 +3,7 @@ import sys
 import time
 import json
 import requests
-import urllib
+import urllib.request
 import threading
 import cv2
 import math
@@ -12,6 +12,7 @@ import logging
 
 key = None
 img_size = '200x225'
+step = 0.000130  # for 200x225
 max_threads = 500
 resquest_per_second = 40.0  # limit is 50/sec, up to 2500/day
 nb_of_no_crosswalk_foreach_crosswalk = 2.2
@@ -40,7 +41,7 @@ def thread_download_static_map(location, type, region_name):
     request_url = '{}?center={}&zoom=20&size={}&maptype=satellite&key={}'.format(
         base_api_static_maps, ','.join(map(str, [location['lat'], location['lng']])), img_size, key
     )
-    urllib.urlretrieve(request_url, os.path.join(region_name, type, '{}.png'.format(location['id'])))
+    urllib.request.urlretrieve(request_url, os.path.join(region_name, type, '{}.png'.format(location['id'])))
 
 
 def get_directions_polylines(waypoints):
@@ -374,6 +375,7 @@ if __name__ == '__main__':
 
     if len(sys.argv) != 5:
         msg = '4 arguments required:\npython {} region_name {{download_crosswalk:0,1}} {{download_no_crosswalk:0,1}} API_KEY'
-        exit(msg.format(os.path.basename(sys.argv[0])))
+        print(msg.format(os.path.basename(sys.argv[0])))
+        exit()
 
     main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
