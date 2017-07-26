@@ -3,6 +3,7 @@ import sys
 import time
 import json
 import requests
+import argparse
 import urllib.request
 import threading
 import cv2
@@ -12,8 +13,7 @@ import logging
 
 key = None
 img_size = '200x225'
-step = 0.000130  # for 200x225
-max_threads = 500
+max_threads = 120
 resquest_per_second = 40.0  # limit is 50/sec, up to 2500/day
 nb_of_no_crosswalk_foreach_crosswalk = 2.2
 get_path_every_n_crosswalks = 1
@@ -280,20 +280,12 @@ def load_regions(regions_name):
         return json.load(hf)[regions_name]
 
 
-def main(region_name, download_crosswalk_flag, download_no_crosswalk_flag, api_key=None):
+def main(region_name, download_crosswalk, download_no_crosswalk, api_key):
 
-    if api_key is None:
-        exit('Go to console.developers.google.com and get an API_KEY: it is required!')
     global key
     key = api_key
 
     regions = load_regions(region_name)
-
-    # get what is to be downloaded
-    download_crosswalk = bool(int(download_crosswalk_flag))
-    download_no_crosswalk = bool(int(download_no_crosswalk_flag))
-    if (not download_crosswalk) and (not download_no_crosswalk):
-        exit('Nothing to download. Bye!')
 
     # build download str
     download_str = "crosswalks" if download_crosswalk else "no-crosswalks"
@@ -373,9 +365,17 @@ def main(region_name, download_crosswalk_flag, download_no_crosswalk_flag, api_k
 
 if __name__ == '__main__':
 
-    if len(sys.argv) != 5:
-        msg = '4 arguments required:\npython {} region_name {{download_crosswalk:0,1}} {{download_no_crosswalk:0,1}} API_KEY'
-        print(msg.format(os.path.basename(sys.argv[0])))
-        exit()
+    parser = argparse.ArgumentParser(description='Download crosswalk satellite imagery from a given region.')
+    parser.add_argument('--region', type=str, required=True, help='Region name: regions.json')
+    parser.add_argument('--positive', dest='positive', action='store_true', help='Download positive samples')
+    parser.add_argument('--negative', dest='negative', action='store_true', help='Download negative samples')
+    parser.add_argument('--key', type=str, required=True, help='API_KEY: console.developers.google.com')
+    parser.set_defaults(positive=False)
+    parser.set_defaults(negative=False)
+    argv = parser.parse_args()
 
-    main(sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
+    if not (argv.positive or argv.negative):
+        print('Nothing to do.')
+        sys.exit()
+
+    main(argv.region, argv.positive, argv.negative, argv.key)
