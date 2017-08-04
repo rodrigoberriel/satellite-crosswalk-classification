@@ -4,7 +4,7 @@
 
 [IEEE Geoscience and Remote Sensing Letters](http://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=8859): [10.1109/LGRS.2017.2719863](https://doi.org/10.1109/LGRS.2017.2719863)
 
-[![Thumbnail](https://github.com/rodrigoberriel/satellite-crosswalk-classification/blob/master/thumbnail.jpg)](http://ieeexplore.ieee.org/document/7979607/)
+[![Thumbnail](https://github.com/rodrigoberriel/satellite-crosswalk-classification/blob/master/images/thumbnail.jpg)](http://ieeexplore.ieee.org/document/7979607/)
 
 High-resolution satellite imagery have been increasingly used on remote sensing classification problems. One of the main factors is the availability of this kind of data. Even though, very little effort has been placed on the zebra crossing classification problem. In this letter, crowdsourcing systems are exploited in order to enable the automatic acquisition and annotation of a large-scale satellite imagery database for crosswalks related tasks. Then, this dataset is used to train deep-learning-based models in order to accurately classify satellite images that contains or not zebra crossings. A novel dataset with more than 240,000 images from 3 continents, 9 countries and more than 20 cities were used in the experiments. Experimental results showed that freely available crowdsourcing data can be used to accurately (96.78%) train robust models to perform crosswalk classification on a global scale.
 
@@ -56,10 +56,10 @@ The dataset used in this work is defined by a group of city-based regions. As st
 | **Total**                  | **74,047** | **171,721**   |
 
 ### Positive Samples
-Available soon
+![PositiveSamples](https://github.com/rodrigoberriel/satellite-crosswalk-classification/blob/master/images/positive-samples.png)
 
 ### Negative Samples
-Available soon
+![NegativeSamples](https://github.com/rodrigoberriel/satellite-crosswalk-classification/blob/master/images/negative-samples.png)
 
 #### BibTeX
 
