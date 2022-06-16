@@ -1,6 +1,6 @@
 ## Models
 
-You can download the models in this [Google Drive directory](https://drive.google.com/open?id=0B28GajqdPp8_OTB4VHVxTFN0X0U). If the link is broken, feel free to send me an email or open an issue.
+You can download the models in this [Google Drive directory](https://drive.google.com/drive/folders/1oeI5VAFfblfJjr2JzwcndXjnAmPkZMK6?usp=sharing). If the link is broken, feel free to send me an email or open an issue.
 
 In this directory, you'll find 14 models:
 
